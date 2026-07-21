@@ -1,5 +1,4 @@
 <?php session_start() ?>
-<!--<h1>admin-page.php</h1>-->
 <?php require_once "./../db.php"; ?>
 <?php
 $title = 'Редактирование информации nav';
@@ -31,50 +30,56 @@ $nav = $sql->fetch(PDO::FETCH_ASSOC);
       echo "Аккуратненько &nbsp;" . $_SESSION['login'], ",&nbsp; аккуратненько."
       ?>
 
-      <br><br><a href="./logout.php" style="color:#f02b2bff">Выйти</a><br><br>
+      <br><br><a href="./../logout.php" style="color:#f02b2bff">Выйти</a><br><br>
 
       <style>
         .lab {
           font-style: italic;
           font-size: 20px;
         }
+
         .inp {
           padding: 10px 50px 10px 50px;
           border-radius: 5px;
         }
       </style>
-      <div style="display:flex;justify-content: center;gap:50px;">
-        <div>
-          <label class="lab">phone</label><br>
-          <input class="inp" type="text" name="phone" value="<?= $nav['phone'] ?>"><br><br>
-          <label class="lab">phone-num</label><br>
-          <input class="inp" type="text" name="phone-num" value="<?= $nav['phone-num'] ?>"><br><br>
-          <label class="lab">num-span</label><br>
-          <input class="inp" type="text" name="num-span" value="<?= $nav['nav-span'] ?>">
-        </div>
-        <div>
-          <label class="lab">home</label><br>
-          <input class="inp" type="text" name="home" value="<?= $nav['page-home'] ?>"><br><br>
+      <form action="./../lib-admin/nav.php" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<?= $nav['id'] ?>">
+          
+        <div style="display:flex;justify-content: center;gap:50px;">
+          <div>
+            <label class="lab">phone</label><br>
+            <input class="inp" type="text" name="phone" value="<?= $nav['phone'] ?>"><br><br>
+            <label class="lab">num</label><br>
+            <input class="inp" type="text" name="num" value="<?= $nav['num'] ?>"><br><br>
+            <label class="lab">ting</label><br>
+            <input class="inp" type="text" name="ting" value="<?= $nav['ting'] ?>">
+          </div>
+          <div>
+            <label class="lab">home</label><br>
+            <input class="inp" type="text" name="home" value="<?= $nav['page-home'] ?>"><br><br>
             <label class="lab">menu</label><br>
-          <input class="inp" type="text" name="menu" value="<?= $nav['page-menu'] ?>"><br><br>
-             <label class="lab">story</label><br>
-          <input class="inp" type="text" name="story" value="<?= $nav['page-story'] ?>"><br><br>
+            <input class="inp" type="text" name="menu" value="<?= $nav['page-menu'] ?>"><br><br>
+            <label class="lab">story</label><br>
+            <input class="inp" type="text" name="story" value="<?= $nav['page-story'] ?>"><br><br>
             <label class="lab">contact</label><br>
-          <input class="inp" type="text" name="contact" value="<?= $nav['page-contact'] ?>"><br><br>
-        </div>
-        <div>
-          <input type="file" name="['im']"><br><br><br><br>
-             <img src="./../image/nav/Logo.png" alt="logo">
-        </div>
-      </div>
+            <input class="inp" type="text" name="contact" value="<?= $nav['page-contact'] ?>"><br><br>
+          </div>
+          <div>
+            <input type="file" name="im"><br><br><br>
 
+            <input class="inp" style="color: yellow;  font-weight: 700; background-color:#7e7cc5ff" type="submit" name="save" value="СОХРАНИТЬ"><br><br><br><br>
+            <img src="./../image/nav/<?= $nav['filename'] ?>" alt="logo">
+          </div>
+        </div>
+      </form>
 
   </div>
 
 <?php else:
       echo "<h3>НИ-НИ, НЕЛЬЗЯЯЯЯ</h3>"
 ?>
-  <br><a href="./logout.php" style="color:#f02b2bff">ВЫЙТИ</a>
+  <br><a href="./../logout.php" style="color:#f02b2bff">ВЫЙТИ</a>
 
   <!-- ПРОДОЛЖЕНИЕ СОКРАЩЕННОЙ ЗАПИСИ Т.Е. ЗАКРЫВАЕМ-->
 <?php endif ?>

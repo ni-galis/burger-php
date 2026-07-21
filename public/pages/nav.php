@@ -27,7 +27,7 @@ $nav = $sql->fetch(PDO::FETCH_ASSOC);
       <div class="nav__row">
 
         <div class="nav__row-logo">
-          <img class="logo__img" src="./image/nav/<?php echo $nav['logo'] ?>" alt="logo">
+          <img class="logo__img" src="./image/nav/<?php echo $nav['filename'] ?>" alt="logo">
         </div>
 
         <form action="./auth.php" method="post">
@@ -37,8 +37,8 @@ $nav = $sql->fetch(PDO::FETCH_ASSOC);
         <div class="nav__row-info">
           <div class="row-info__top">
             <img class="info__top-img" src="./image/nav/<?php echo $nav['car'] ?>" alt="phone-img">
-            <span class="top__span"><?php echo $nav['nav-span'] ?></span>
-            <a class="top__num" href="tel:+1234567890"><?php echo $nav['phone-num'] ?></a>
+            <span class="ting"><?php echo $nav['ting'] ?></span>
+            <a class="num" name="num" href="tel:+1234567890"><?php echo $nav['num'] ?></a>
           </div><!--row-info__top-->
 
           <div class="burger-btn">
