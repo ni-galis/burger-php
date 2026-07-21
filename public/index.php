@@ -1,26 +1,34 @@
-<?php require_once "./pages/nav.php";?>
+<?php require_once "./db.php" ?>
+<?php
+$sql = "SELECT * FROM header";
+$sql = $pdo->prepare($sql);
+$sql->execute();
+$header = $sql->fetch(PDO::FETCH_ASSOC);
+?>
 
-  <header class="header">
-    <div class="container">
-      <div class="header__row" style="background-image: url('./image/header/bg.jpg');">
-        <div class="header__row">
-          <div class="header__info">
-            <div class="header__subtitle">It is a good time for the great taste of burgers</div>
-            <img class="sub-retangle" src="./image/header/subtitle-rectangle.png" alt="restangle">
-            <h1 class="header__title">Burger</h1>
-            <div class="header__suptitle">Week</div>
-          </div><!--header__info-->
+<?php require_once "./pages/nav.php"; ?>
 
-          <div class="header-img">
-            <img src="./image/header/burger-1.png" alt="">
-          </div>
+<header class="header">
+  <div class="container">
+    <div class="header__row" style="background-image: url('./image/header/<?= $header['fond'] ?>');">
+      <div class="header__row">
+        <div class="header__info">
+          <div class="header__subtitle"><?= $header['subtitle'] ?></div>
+          <img class="sub-retangle" src="./image/header/<?= $header['rectangle'] ?>" alt="restangle">
+          <h1 class="header__title"><?= $header['title'] ?></h1>
+          <div class="header__suptitle"><?= $header['suptitle'] ?></div>
+        </div><!--header__info-->
 
-        </div><!--header__row-->
-      </div><!--container-->
-  </header>
+        <div class="header-img">
+          <img src="./image/header/<?= $header['filename'] ?>" alt="burger">
+        </div>
 
-<?php require_once "./pages/burger.php"?>
-<?php require_once "./pages/choce.php"?>
-<?php require_once "./pages/discover.php"?>
-<?php require_once "./pages/reservation.php"?>
- <?php require_once "./pages/footer.php"?>
+      </div><!--header__row-->
+    </div><!--container-->
+</header>
+
+<?php require_once "./pages/burger.php" ?>
+<?php require_once "./pages/choce.php" ?>
+<?php require_once "./pages/discover.php" ?>
+<?php require_once "./pages/reservation.php" ?>
+<?php require_once "./pages/footer.php" ?>

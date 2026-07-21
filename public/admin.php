@@ -32,7 +32,8 @@ require_once "./blocks/header-top.php"
         }
       </style>
       <a class="page" href="./admin-pages/nav.php">Nav</a> |
-      <a class="page" href="./lib-editing/burger.php">Burger</a> |
+      <a class="page" href="./admin-pages/header.php">Header</a> |
+      <a class="page" href="./admin-pages/burger.php">Burger</a> |
       <a class="page" href="./lib-editing/choce.php">Choce</a> |
       <a class="page" href="./lib-editing/discover.php">Discover</a> |
       <a class="page" href="./lib-editing/reservation.php">Reservation</a> |
