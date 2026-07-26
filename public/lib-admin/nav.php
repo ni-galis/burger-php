@@ -4,6 +4,7 @@ $title = "Обработка nav";
 require_once "./../blocks/header-top.php"
 ?>
 <?php require_once "./../db.php" ?>
+<body style="background-color:#efefef;"></body>
 <?php
 $phone = trim(filter_var($_POST['phone'], FILTER_SANITIZE_SPECIAL_CHARS));
 $num = trim(filter_var($_POST["num"], FILTER_SANITIZE_SPECIAL_CHARS));

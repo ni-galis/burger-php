@@ -31,13 +31,13 @@ require_once "./blocks/header-top.php"
           color: #f79708ff;
         }
       </style>
-      <a class="page" href="./admin-pages/nav.php">Nav</a> |
-      <a class="page" href="./admin-pages/header.php">Header</a> |
-      <a class="page" href="./admin-pages/burger.php">Burger</a> |
-      <a class="page" href="./lib-editing/choce.php">Choce</a> |
-      <a class="page" href="./lib-editing/discover.php">Discover</a> |
-      <a class="page" href="./lib-editing/reservation.php">Reservation</a> |
-      <a class="page" href="./lib-editing/footer.php">Footer</a> |
+      <a class="page" href="./admin-pages/nav.php">nav</a> |
+      <a class="page" href="./admin-pages/header.php">header</a> |
+      <a class="page" href="./admin-pages/hamburger.php">hamburger</a> |
+      <a class="page" href="./admin-pages/choce.php">choce</a> |
+      <a class="page" href="./lib-editing/discover.php">discover</a> |
+      <a class="page" href="./lib-editing/reservation.php">reservation</a> |
+      <a class="page" href="./lib-editing/footer.php">
 
   </div>
 

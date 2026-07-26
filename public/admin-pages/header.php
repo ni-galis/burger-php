@@ -1,4 +1,5 @@
 <?php session_start() ?>
+<h1 style="color:yellowgreen;font-size:16px;">admin-pages/header.php</h1>
 <?php require_once "./../db.php"; ?>
 <?php
 $title = 'Редактирование главной страницы';
