@@ -30,6 +30,7 @@ if (strlen($filename_3) <= 2) {
 $title = "Обработка hamburger";
 require_once "./../blocks/header-top.php";
 
+
 // Проверка: имена файлов не должны быть пустыми
 if (strlen($filename_1) <= 2 || strlen($filename_2) <= 2 || strlen($filename_3) <= 2) {
     exit("Ошибка: Неверные имена файлов в базе данных.");

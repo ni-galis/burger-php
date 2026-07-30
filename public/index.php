@@ -28,7 +28,7 @@ $header = $sql->fetch(PDO::FETCH_ASSOC);
 </header>
 
 <?php require_once "./pages/hamburger.php" ?>
-<?php require_once "./pages/choce.php" ?>
+<?php require_once "./pages/chooce.php" ?>
 <?php require_once "./pages/discover.php" ?>
 <?php require_once "./pages/reservation.php" ?>
 <?php require_once "./pages/footer.php" ?>

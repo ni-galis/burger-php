@@ -15,7 +15,7 @@ $nav = $sql->fetch(PDO::FETCH_ASSOC);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/favicon/favicon (10).ico" type="image/x-icon">
   <link rel="stylesheet" href="./swiper-bundle.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./../css/style.css">
   <title>BURGER</title>
 
 </head>
