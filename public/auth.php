@@ -46,9 +46,9 @@ require_once "./blocks/header-top.php"
   <form style="text-align:center;padding-top: 20px;" action="/lib/auth.php" method="post">
 
     <label class="lab">логин</label><br>
-    <input class="inp" type="text" name="login" placeholder="Введите логин"><br><br>
+    <input class="inp" type="text" name="login" placeholder="Введите логин  admin"><br><br>
     <label class="lab">password</label><br>
-    <input class="inp" type="password" name="password" placeholder="Введите пароль"><br><br>
+    <input class="inp" type="password" name="password" placeholder="Введите пароль 111"><br><br>
     <button class="auth-btn" type="submit">ВОЙТИ</button>
   </form>
 

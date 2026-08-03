@@ -29,3 +29,30 @@ temp/
 Thumbs.db     # Windows
 .idea/        # IntelliJ IDEA, PhpStorm
 .vscode/      # VS Code
+
+#Чат в режиме ИИ: vscode "cSpell.language": "ru, en", "cSpell.u
+{
+    "cSpell.language": "ru,en",
+    "cSpell.userWords": [
+        "примерСлова",
+        "юзерворд"
+    ]
+}
+#Используйте код с осторожностью.Вариант 2. Глобальная настройка для всего VS CodeЕсли вы хотите, чтобы проверка русского и английского языков работала во всех проектах и файлах:Откройте VS Code.Нажмите комбинацию клавиш Ctrl + , (или Cmd + , на macOS), чтобы открыть настройки.В правом верхнем углу нажмите на иконку "Open Settings (JSON)" (иконка файла со стрелкой), чтобы открыть глобальный файл конфигурации.Добавьте указанные строки внутрь фигурных скобок { ... }. Не забудьте поставить запятую после предыдущего параметра:json{
+    // ... другие ваши настройки ...
+    "cSpell.language": "ru,en",
+    "cSpell.userWords": []
+}
+#Используйте код с осторожностью.Важное примечание по языковым пакетамДля того чтобы проверка русского языка заработала, у вас должен быть установлен соответствующий словарь.Перейдите во вкладку Extensions (Расширения) в VS Code (Ctrl + Shift + X).Найдите и установите расширение Russian - Code Spell Checker (от автора Street Side Software). Без этого плагин cSpell будет выдавать ошибку, так как по умолчанию он знает только английский.Если вы хотите, чтобы я помог настроить исключения для конкретных типов файлов (например, отсечь проверку кода в .json или .md), или вам нужно подключить внешний файл словаря .txt, напишите об этом.4 сайтаAdd general setting to restrict the scope to comments and strings only · Issue #116 · streetsidesoftware/vscode-spell-checkerJason3S commented on Jul 24, 2017 It is possible to check only comments and strings: Here is an example cspell. json file. It can ...GitHubHow to set up CSpell for spelling-mistake free codeEnter CSpell by Side Street Software- a simple spell checker, with an easy to use CLI, that's highly customisable and supports loc...MediumCode spell checker for VScode multiple folder workspacesThe cause As I discovered in this Github issue, when cSpell highlights a word, it gives you the option to whitelist it for the use...gotofritz.netПоказать всекод вырезать из vscode jsonВот чистый код, который нужно скопировать и вставить в ваш файл settings.json (удалите всё старое содержимое файла и замените этим):json{
+  "cSpell.language": "ru,en",
+  "cSpell.userWords": []
+}
+#Используйте код с осторожностью.Если вы хотите, чтобы я помог вам добавить первые слова в список "cSpell.userWords" или настроить автоматическое добавление слов по клику мыши, дайте знать.автоматическое добавление словЧтобы слова добавлялись автоматически при клике на лампочку (Quick Fix), добавьте в ваш settings.json параметр "cSpell.words" вместо userWords.Вот готовый код для копирования:json{
+  "cSpell.language": "ru,en",
+  "cSpell.words": []
+}
+#Используйте код с осторожностью.Как это работает:Наведите на подчеркнутое слово.Нажмите Ctrl + . (или кликните на желтую лампочку).Выберите "Add Word to Folder Settings" (или Workspace Settings).Слово само запишется в массив "cSpell.words".Если вы хотите, чтобы слова сохранялись не в папку проекта, а глобально для всего компьютера, выберите в меню лампочки пункт "Add Word to User Settings". Хотите настроить быстрые клавиши для добавления слов в один клик?папка vscode попадает в папку .gitignoreЧтобы скрыть папку .vscode от Git, но при этом сохранить общие настройки settings.json для команды, используйте правильные правила исключения.Готовый код для файла .gitignoreОткройте файл .gitignore в корне вашего проекта и добавьте туда следующие строки:gitignore# Игнорировать папку настроек VS Code полностью
+.vscode/
+
+# ИСКЛЮЧЕНИЕ: отслеживать файл настроек cSpell/проекта, если нужно
+ !.vscode/settings.json

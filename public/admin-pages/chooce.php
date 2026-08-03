@@ -14,7 +14,7 @@ $all_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $main_data = $all_rows[0] ?? [];
 ?>
 
-<body style="background: linear-gradient(90deg, #ba8b02, #181818); height:100vh;">
+<body style="background: linear-gradient(90deg, #ba8b02, #181818); min-height:100vh;">
 
   <h3 style="color:#eeaf3bff; text-align: center; padding-top:80px;font-size: 35px">РЕДАКТИРОВАНИЕ ИНФОРМАЦИИ CHOOSE</h3>
 
@@ -42,7 +42,7 @@ $main_data = $all_rows[0] ?? [];
       <form action="/lib-admin/chooce.php" method="post" enctype="multipart/form-data">
 
         <!-- Общая часть (заголовки) -->
-        <div style="margin-bottom: 40px; background: rgba(0,0,0,0.2); padding: 20px; border-radius: 10px;">
+        <div style="margin-bottom: 40px;padding: 20px; border-radius: 10px;">
           <label class="lab">subtitle</label><br>
           <input class="inp" type="text" name="subtitle" value="<?= htmlspecialchars($main_data['subtitle'] ?? '') ?>"><br><br>
           <label class="lab">title</label><br>

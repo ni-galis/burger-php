@@ -36,7 +36,7 @@ require_once "./blocks/header-top.php"
       <a class="page" href="./admin-pages/hamburger.php">hamburger</a> |
       <a class="page" href="./admin-pages/chooce.php">chooce</a> |
       <a class="page" href="./admin-pages/discover.php">discover</a> |
-      <a class="page" href="./lib-editing/reservation.php">reservation</a> |
+      <a class="page" href="./admin-pages/reservation.php">reservation</a> |
       <a class="page" href="./lib-editing/footer.php">
 
   </div>
