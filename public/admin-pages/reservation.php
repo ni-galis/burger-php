@@ -22,7 +22,8 @@ if (!$reservation) {
 }
 ?>
 
-<body style="background: linear-gradient(200deg, #8a2be2, #000000, #0000cd, #228b22, #ccff00); min-height:100vh; font-family: sans-serif; margin: 0; padding: 0;">
+<body style="background: linear-gradient(200deg, #8a2be2, #000000, #0000cd, #228b22, #ccff00); min-height:100vh; 
+font-family: sans-serif; margin: 0; padding: 0;">
 
   <h1 style="color:yellowgreen; font-size:16px; margin: 10px;">admin-pages/reservation.php</h1>
 

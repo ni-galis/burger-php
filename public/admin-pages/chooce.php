@@ -24,17 +24,27 @@ $main_data = $all_rows[0] ?? [];
 
       <?= "Резвись аккуратно " . htmlspecialchars($_SESSION['login']) . " и осторожно." ?>
       <br><br><a href="./logout.php" style="color:#f02b2bff">Выйти</a><br><br>
-  
+
       <style>
-        .lab { font-style: italic; font-size: 20px; color: #fff; }
-        .inp { padding: 10px 20px; border-radius: 5px; border: 1px solid #ccc; }
-        .row-container { 
-          display: flex; 
-          justify-content: center; 
-          gap: 30px; 
-          margin-bottom: 20px; 
-          padding: 15px; 
-          border: 1px solid rgba(255,255,255,0.2); 
+        .lab {
+          font-style: italic;
+          font-size: 20px;
+          color: #fff;
+        }
+
+        .inp {
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+
+        .row-container {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          margin-bottom: 20px;
+          padding: 15px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
           border-radius: 8px;
         }
       </style>
@@ -54,14 +64,14 @@ $main_data = $all_rows[0] ?? [];
         <!-- Цикличная часть для колонок -->
         <?php foreach ($all_rows as $row) : ?>
           <div class="row-container">
-            
+
             <!-- Скрытый ID строки -->
             <input type="hidden" name="ids[]" value="<?= $row['id'] ?>">
 
             <div>
               <label class="lab">column_title (ID: <?= $row['id'] ?>)</label><br>
               <input class="inp" type="text" name="column_title[<?= $row['id'] ?>]" value="<?= htmlspecialchars($row['column_title'] ?? '') ?>"><br><br>
-              
+
               <label class="lab">column_suptitle</label><br>
               <input class="inp" type="text" name="column_suptitle[<?= $row['id'] ?>]" value="<?= htmlspecialchars($row['column_suptitle'] ?? '') ?>"><br><br>
             </div>
@@ -69,7 +79,7 @@ $main_data = $all_rows[0] ?? [];
             <div>
               <label class="lab">shadow</label><br>
               <input class="inp" type="text" name="shadow[<?= $row['id'] ?>]" value="<?= htmlspecialchars($row['shadow'] ?? '') ?>"><br><br>
-              
+
               <label class="lab">column_order</label><br>
               <input class="inp" type="text" name="column_order[<?= $row['id'] ?>]" value="<?= htmlspecialchars($row['column_order'] ?? '') ?>"><br><br>
             </div>

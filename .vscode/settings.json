@@ -1,4 +1,4 @@
- {
+{
   "cSpell.language": "ru,en",
   "cSpell.userWords": [
     "админку",
@@ -91,7 +91,10 @@
     "Zakopane"
   ],
   "cSpell.words": [
+    "раскомментирование",
     "редиректом",
-    "юзерворд"
+    "юзерворд",
+    "customisable",
+    "gotofritz"
   ]
 }
