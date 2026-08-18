@@ -59,4 +59,5 @@ Thumbs.db     # Windows
 
  config.php
 
- .env
+# --- БАЗА ДАННЫХ ---
+.BD/
